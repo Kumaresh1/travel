@@ -25,6 +25,8 @@ app.use('/cars', carRouter)
 const bookingRouter = require('./routes/bookings')
 app.use('/bookings', bookingRouter)
 
-app.listen(9000, () => {
+const Port = process.env.PORT || 3000;
+
+app.listen(Port, () => {
     console.log('Server started')
 })
